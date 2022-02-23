@@ -1,4 +1,4 @@
 #!/bin/bash
-bucket=`aws s3api list-buckets --query "Buckets[].Name" | grep s3bucket | tr -d ',' | sed -e 's/"//g' | xargs`
+bucket="jjp-2022-02-21-s3site"
 #echo $bucket
-aws s3 cp ~/environment/resources/website/config.js s3://$bucket/config.js
+aws s3 cp /Users/juan.palacio/Documents/modern-python-apps-aws/resources/website/config.js s3://$bucket/config.js

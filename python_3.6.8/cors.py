@@ -1,10 +1,9 @@
 import boto3
-import subprocess 
 
-bucket_name_str = subprocess.getoutput('aws s3api list-buckets --query "Buckets[].Name" | grep s3bucket | tr -d "," | xargs')
+bucket_name_str = "jjp-2022-02-21-s3site"
 
 client = boto3.client('apigateway', region_name='us-west-2')
-client_bucket = boto3.client('s3', region_name='us-west-2')
+client_bucket = boto3.client('s3', region_name='us-east-2')
 bucket = client_bucket.list_buckets()
 
 response = client.get_rest_apis(
