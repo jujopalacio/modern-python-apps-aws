@@ -10,10 +10,10 @@ var SEARCH = (function(){
 	function buildSearchBox(){
 		var
 			html_str = '';
-		html_str += '<img data-role="kiosk_top" src="./kiosk_top.png" />';
-		html_str += '<img data-role="kiosk_bottom" src="./kiosk_bottom.png" />';
-		html_str += '<img data-role="kiosk_left" src="./kiosk_left.png" />';
-		html_str += '<img data-role="kiosk_right" src="./kiosk_right.png" />';
+		html_str += '<img data-role="kiosk_top" src="kiosk_top.png" />';
+		html_str += '<img data-role="kiosk_bottom" src="kiosk_bottom.png" />';
+		html_str += '<img data-role="kiosk_left" src="kiosk_left.png" />';
+		html_str += '<img data-role="kiosk_right" src="kiosk_right.png" />';
 		$(html_str).appendTo("[data-role='screen_backdrop']");
 		html_str = '';
 		html_str += '<div data-role="search_box" contenteditable>Start typing your search phrase...</div>';
